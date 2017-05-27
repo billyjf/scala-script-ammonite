@@ -3,7 +3,7 @@ os: osx
 
 before_script: |
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  brew install ammonite
+  brew install ammonite-repl
 
 # TODO: Test actual invocation of Scala script here
 #script: |
