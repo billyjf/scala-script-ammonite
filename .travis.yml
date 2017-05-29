@@ -6,6 +6,4 @@ before_script: |
   brew install ammonite-repl
 
 script: |
-  amm << EOF
-  println("Hello ammonite!")
-  EOF
+  amm HelloWorld.sc
