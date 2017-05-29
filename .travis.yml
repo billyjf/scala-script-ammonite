@@ -6,4 +6,4 @@ before_script: |
   brew install ammonite-repl
 
 script: |
-  amm HelloWorld.sc
+  ./HelloWorld.sc
