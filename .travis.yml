@@ -3,12 +3,19 @@ os:
   #- osx
   - linux
 
+sudo: required
+
 before_script: |
   #/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+  # http://linuxbrew.sh/
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
   PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
   echo 'export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"' >>~/.bash_profile
-  
+
+  # Feedback from installation of linuxbrew
+  sudo apt-get install build-essential
+
   brew install ammonite-repl
 
 script: |
