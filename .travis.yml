@@ -1,8 +1,14 @@
 language: bash
-os: osx
+os:
+  #- osx
+  - linux
 
 before_script: |
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  #/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
+  PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+  echo 'export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"' >>~/.bash_profile
+  
   brew install ammonite-repl
 
 script: |
